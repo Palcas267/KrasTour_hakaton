@@ -12,11 +12,11 @@ def load_user(user_id):
     return User.get(user_id)
 
 
-"""@app.route('/logout')
+@app.route('/logout')
 @login_required
 def logout():
     logout_user()
-    return redirect('/authorization')"""
+    return redirect('/register')
 
 
 @app.route('/')
@@ -36,6 +36,8 @@ def support():
 
 @app.route('/admin')
 def admin():
+    if not session['admin_mode']:
+        session['admin_mode'] = False
     return render_template('admin.html')
 
 
@@ -46,7 +48,7 @@ def redister():
 
 @app.route('/catalog')
 def catalog():
-    return render_template('register.html')
+    return render_template('catalog.html')
 
 
 if __name__ == "__main__":
