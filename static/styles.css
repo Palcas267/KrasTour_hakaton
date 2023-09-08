@@ -2,6 +2,35 @@
 url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nunito+Sans:wght@200;300;400;500;600;700&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap');
 
 
+.bg_dark {
+    position: relative;
+    opacity: 1;
+}
+
+
+.bg_dark:before {
+	content: '';
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, .3);
+}
+
+
+.headline {
+    position: absolute;
+    font-weight: 600;
+    font-size: 3em;
+    font-family: 'Inter', sans-serif;
+    text-decoration: none;
+    color: white;
+}
+
+
 .header-ref {
     padding-top: 0.3em;
     vertical-align: middle;
