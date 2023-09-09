@@ -22,8 +22,7 @@ url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600
 
 
 .headline {
-    position: absolute;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 3em;
     font-family: 'Inter', sans-serif;
     text-decoration: none;
@@ -43,11 +42,25 @@ url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600
 }
 
 
-
+.section-text {
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.6em;
+    font-family: 'Inter', sans-serif;
+}
 
 
 a:hover {
     color: rgb(159, 180, 214);
     transition: 0.5s;
     animation: ch-color-1 3s forwards;
+}
+
+
+#leaf {
+    transform: rotate(100deg);
+    height: 33%;
+    wight: 33%;
+    margin-bottom: 5.5em;
+    margin-left: 10em
 }
