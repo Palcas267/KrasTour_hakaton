@@ -1,12 +1,17 @@
 @import
 url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nunito+Sans:wght@200;300;400;500;600;700&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap');
 
+body {overflow-x:hidden;}
 
 .bg_dark {
     position: relative;
     opacity: 1;
 }
 
+.bord {
+    height: 3.55em;
+    z-index: 200;
+}
 
 .bg_dark:before {
 	content: '';
@@ -58,9 +63,17 @@ a:hover {
 
 
 #leaf {
-    transform: rotate(100deg);
+    transform: rotate(190deg) scale(-1, 1);
     height: 33%;
     wight: 33%;
-    margin-bottom: 5.5em;
+    margin-bottom: 5.1em;
     margin-left: 10em
+}
+
+#heart {
+    transform: scale(-1, 1);
+    position: absolute;
+    right: 20rem;
+    height: 230px;
+    wight: 230px;
 }
