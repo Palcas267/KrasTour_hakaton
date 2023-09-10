@@ -3,26 +3,22 @@ url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600
 
 body {overflow-x:hidden;}
 
+
+.header {
+    position: fixed;
+    width: 100%;
+}
+
+
 .bg_dark {
-    position: relative;
+    background-size: cover;
     opacity: 1;
 }
 
 .bord {
+    display: flex;
     height: 3.55em;
     z-index: 200;
-}
-
-.bg_dark:before {
-	content: '';
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background-color: rgba(0, 0, 0, .3);
 }
 
 
@@ -50,7 +46,7 @@ body {overflow-x:hidden;}
 .section-text {
     text-decoration: none;
     font-weight: 700;
-    font-size: 1.6em;
+    font-size: 150%;
     font-family: 'Inter', sans-serif;
 }
 
@@ -64,16 +60,15 @@ a:hover {
 
 #leaf {
     transform: rotate(190deg) scale(-1, 1);
-    height: 33%;
-    wight: 33%;
+    height: 25%;
+    wight: 25%;
     margin-bottom: 5.1em;
     margin-left: 10em
 }
 
 #heart {
     transform: scale(-1, 1);
-    position: absolute;
-    right: 20rem;
+    position: relative;
     height: 230px;
     wight: 230px;
 }
