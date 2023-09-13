@@ -229,3 +229,27 @@ input[type="email"]::-moz-placeholder {
 }
 
 
+input.register::placeholder {
+    color: white;
+    font-size: 1.3vw;
+}
+
+
+.search {
+    height: 2.3vw;
+}
+
+
+input.search::placeholder {
+    font-size: 1.3vw;
+}
+
+
+.footer-headline {
+    font-weight: 700;
+    font-size: 1.8vw;
+    font-family: 'Inter', sans-serif;
+    text-decoration: none;
+    color: white;
+}
+
