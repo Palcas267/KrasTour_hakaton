@@ -29,11 +29,6 @@ def about():
     return render_template('about.html')
 
 
-@app.route('/support')
-def support():
-    return render_template('support.html')
-
-
 @app.route('/admin')
 def admin():
     if not session['admin_mode']:

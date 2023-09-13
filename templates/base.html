@@ -12,10 +12,10 @@
         <nav class="py-2 bg-body-tertiary" style="background-color: #2D3047;">
             <div class="container d-flex flex-wrap">
               <ul class="nav me-auto">
-                <a href="/" class="header-ref" aria-current="page" style="vertical-align: middle; font-weight: 600;">Главная</a>
-                <a href="/catalog" class="header-ref" style="vertical-align: middle; font-weight: 600;">Туры</a>
-                <a href="/support" class="header-ref" style="vertical-align: middle; font-weight: 600;">Поддержка</a>
-                <a href="/about" class="header-ref" style="vertical-align: middle; font-weight: 600;">О нас</a>
+                <li class="nav-item"><a href="/" type="button" class="header-ref" aria-current="page" style="vertical-align: middle; font-weight: 600;">Главная</a></li>
+                <li class="nav-item"><a href="/catalog" type="button" class="header-ref" style="vertical-align: middle; font-weight: 600;">Туры</a></li>
+                <li class="nav-item"><a href="/support" type="button" class="header-ref" style="vertical-align: middle; font-weight: 600;">Поддержка</a></li>
+                <li class="nav-item"><a href="/about" type="button" class="header-ref" style="vertical-align: middle; font-weight: 600;">О нас</a></li>
               </ul>
               <ul class="nav">
                 <li class="nav-item"><a type="button" href="/register" class="header-ref" style="">Войти</a></li>
@@ -26,11 +26,10 @@
         <header class="py-3 mb-4" style="background: rgba(0, 0, 0, 0.5); margin-bottom: -4.6sdgfem !imsgfdportant; position: relative; z-index: 999999;">
             <div class="container d-flex flex-wrap" style="display: flex; justify-content: space-between; flex-direction: row;">
               <a href="/" class="header-ref" style="padding: 0;">
-                <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
-                <span class="fs-4"><img src="static/images/icon.png" style="height: 40px; margin-right: 1em; border-radius: 50%">Туры по Красноярскому краю</span>
+                <span class="fs-4" style="font-size: 1.5vw !important"><img src="static/images/icon.png" style="width: 2.3vw; margin-right: 1em; border-radius: 50%;">Туры по Красноярскому краю</span>
               </a>
-              <form class="col-12 col-lg-auto mb-3 mb-lg-0" role="search">
-                <input type="search" style="color: white; border: 3px solid #5D7581; background: rgba(56, 75, 82, 0); border-color: #5D7581;" class="form-control" placeholder="Поиск..." aria-label="Search">
+              <form class="col-12 col-lg-auto mb-3 mb-lg-0" style="width: 10vw" role="search">
+                <input type="search" style="color: white; border: 3px solid #5D7581; background: rgba(56, 75, 82, 0); border-color: #5D7581; width: 10vw" class="form-control" placeholder="Поиск..." aria-label="Search">
               </form>
             </div>
         </header>
@@ -39,5 +38,30 @@
       {% block body %}
       {% endblock %}
   </div>
+<footer>
+    <div style="display: flex; justify-content: flex-start; flex-direction: row; background-color: #2D3047; padding: 2%; height: 450px; flex-wrap: wrap;">
+        <div style="display: flex; justify-content: flex-start; flex-direction: column; margin-left: 3%;">
+            <h3 class="headline3">Соц. сети:</h3>
+            <a class="section-text" style="color: white" href="https://vk.com/KrasTour">Наше VK</a>
+        </div>
+        <div style="display: flex; justify-content: flex-start; flex-direction: column; margin-left: 3%;">
+            <h3 class="headline3">Общение:</h3>
+            <span class="section-text" style="color: white">example@exmail.com</span>
+        </div>
+        <div style="display: flex; justify-content: flex-start; flex-direction: column; flex-start; margin-left: 3%; justify-self: center;">
+            <h3 class="headline3">Исходный код:</h3>
+            <a class="section-text" href="https://github.com/Palcas267/KrasTour_hakaton.git" style="color: white">GitHub</a>
+        </div>
+    </div>
+    <div style="display: flex; justify-content: flex-start; flex-direction: row; background-color: #3E4261; padding: 2%; border-bottom: 3px solid #2D3047;">
+        <a class="section-text" href="/about" style="color: white; margin-left: 3%;">О нас</a>
+        <a class="section-text" href="" style="color: white; margin-left: 3%;">Реклама на сайте</a>
+        <a class="section-text" href="/catalog" style="color: white; margin-left: 3%;">Бронирование</a>
+        <a class="section-text" href="/support" style="color: white; margin-left: 3%;">Поддержка</a>
+    </div>
+    <div style="display: flex; justify-content: flex-start; flex-direction: row; background-color: #3E4261; padding: 2%;">
+        <span class="section-text" style="color: gray">@Созданно при поддержке 2-х пирожков и кружке вкусного чая. Компания KrasTour желает вам приятного отдыха</span>
+    </div>
+</footer>
 </body>
 </html>

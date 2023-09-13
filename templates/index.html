@@ -1,20 +1,20 @@
 {% extends 'base.html' %}
 {% block body %}
     <div>
-        <div class="bg_dark" style="display: flex;  flex-direction: row;  justify-content: center; align-items: center; background-image: url('static/images/background_city.png'); background-color: blue; background-repeat: no-repeat; width: 100%; height: 900px; background-size: cover">
+        <div class="bg_dark" style="display: flex;  flex-direction: row;  justify-content: center; align-items: center; background-image: url('static/images/background_city.png'); background-color: blue; background-repeat: no-repeat; width: 100%; height: 1150px;">
             <div class="headline" style="margin-bottom: 1em; text-align: center;">
-                <p style="line-height: 1.8em; font-weight: 700; font-size: 1em;">ПУТЕШЕСТВУЙ, УЗНАВАЙ, РАЗВЛЕКАЙСЯ<br> ПРОВОДИ ВРЕМЯ ПРЕКРАСНО!<br></p>
-                <button class="btn orange-circle-btn" style="margin-top: 3em; padding: 0.4em; padding-right: 0.5em; padding-left: 0.5em; ">Идем дальше ➜</button>
+                <p style="line-height: 1.8em; font-weight: 700; font-size: 3.5vw;">ПУТЕШЕСТВУЙ, УЗНАВАЙ,<br> РАЗВЛЕКАЙСЯ И ПРОВОДИ<br> ВРЕМЯ ПРЕКРАСНО!<br></p>
+                <button class="btn orange-circle-btn" style="margin-top: 10%; padding: 0.4em; padding-right: 0.5em; padding-left: 0.5em; ">Идем дальше ➜</button>
             </div>
         </div>
     </div>
     <div class="bord" style="background-color: #2D3047; height: 3.55em"></div>
-    <div id="" style="background-color: #419D78; padding-left: 5%; display: flex; justify-content: space-around; flex-direction: row; padding-right: 5%; align-content: flex-start;">
-        <div style="display: flex-inline; flex-direction: column; align-items: flex-start; margin-left: -3%; flex-shrink: 0">
+    <div id="" style="background-color: #419D78; padding-left: 5%; display: flex; justify-content: space-around; flex-direction: row; padding-right: 5%; align-content: flex-start; align-items: center">
+        <div style="display: flex-inline; flex-direction: column; align-items: flex-start; margin-left: -3%;">
             <h2 class="headline" style="padding-top: 0.5em; padding-left: 0.5em; margin-bottom: 2em;">Мы, потому что:</h2>
-            <div style="padding-bottom: 4em; background-image: url('static/images/campfire.png'); background-repeat: no-repeat; background-position: center center; ">
+            <div style="padding-bottom: 4em; background-image: url('static/images/campfire.png'); background-repeat: no-repeat; background-position: center center; background-size: cover;">
                 <p class="section-text whywe-block" style="display: inline-block;">Делаем свою<br> работу быстро<br> и качесвенно</p><br>
-                <p style="margin-left: 15rem;" class="section-text whywe-block">Уникальные и <br>интересные<br> маршруты</p><br>
+                <p style="margin-left: 15vw;" class="section-text whywe-block">Уникальные и <br>интересные<br> маршруты</p><br>
                 <p class="section-text whywe-block" style="display: inline-block;">Лучшие на<br> рынке уже как<br> 200 лет</p>
             </div>
         </div>
@@ -30,9 +30,9 @@
         <div id="redblock-part-1">
             <h4 class="headline-mini">Новый опыт</h4>
             <p class="headline2">Узнавайте много<br> нового с нами</p><br>
+            <a href="/catalog" type="button" class="btn orange-circle-btn" style="position: relative; right: 1%; padding: 0.4em; padding-right: 0.6em; padding-left: 0.6em; font-size: 1.7vw; margin-bottom: 1.7em;">➜ Каталог</a>
             <p style="color: white;" class="section-text big">Красноярск - самый большой и один из самых красивых городов Восточной Сибири. Будьте уверенны, здесь вам найдется на что посмотреть.</p><br>
             <p style="color: white;" class="section-text big">В Красноярске экология и благоустройство таковы, что нередко его ставят в пример другим крупным мегаполисам России</p>
-            <a href="/catalog" type="button" class="btn orange-circle-btn" style="position: relative; right: 1%; padding: 0.4em; padding-right: 0.6em; padding-left: 0.6em; font-size: 1.5em">➜ Каталог</a>
         </div>
         <div id="redblock-part-2">
             <div class="red-part">
@@ -69,33 +69,8 @@
         </div>
     </div>
     <div class="bord" style="background-color: #191919;"></div>
-    <div id="gradientblock" style="padding: 1%; background-color: #232627; height: 700px">
+    <div id="gradientblock" style="padding: 1%; background-color: #232627; height: 700px; background: url('static/images/gradient.png'); background-repeat: repeat;">
         <p class="headline" style="text-align: center;">Чего же вы ждете?<br>Регистрируйтесь и начинайте покорять <br> просторы Сибири</p>
     </div>
-    <footer>
-        <div style="display: flex; justify-content: flex-start; flex-direction: row; background-color: #2D3047; padding: 2%; height: 450px">
-            <div style="display: flex; justify-content: flex-start; flex-direction: column; margin-left: 3%;">
-                <h3 class="headline3">Соц. сети:</h3>
-                <a class="section-text" style="color: white" href="https://vk.com/KrasTour">Наше VK</a>
-            </div>
-            <div style="display: flex; justify-content: flex-start; flex-direction: column; margin-left: 3%;">
-                <h3 class="headline3">Общение:</h3>
-                <span class="section-text" style="color: white">example@exmail.com</span>
-            </div>
-            <div style="display: flex; justify-content: flex-start; flex-direction: column; flex-start; margin-left: 3%; justify-self: center;">
-                <h3 class="headline3">Исходный код:</h3>
-                <a class="section-text" href="https://github.com/Palcas267/KrasTour_hakaton.git" style="color: white">GitHub</a>
-            </div>
-        </div>
-        <div style="display: flex; justify-content: flex-start; flex-direction: row; background-color: #3E4261; padding: 2%; border-bottom: 3px solid #2D3047;">
-            <a class="section-text" href="/about" style="color: white; margin-left: 3%;">О нас</a>
-            <a class="section-text" href="" style="color: white; margin-left: 3%;">Реклама на сайте</a>
-            <a class="section-text" href="/catalog" style="color: white; margin-left: 3%;">Бронирование</a>
-            <a class="section-text" href="/support" style="color: white; margin-left: 3%;">Поддержка</a>
-        </div>
-        <div style="display: flex; justify-content: flex-start; flex-direction: row; background-color: #3E4261; padding: 2%;">
-            <span class="section-text" style="color: gray">@Созданно при поддержке 2-х пирожков и кружке вкусного чая. Компания KrasTour желает вам приятного отдыха</span>
-        </div>
-    </footer>
 {% endblock %}
 {% block title %}Main{% endblock %}

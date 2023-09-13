@@ -8,7 +8,7 @@ body {overflow-x:hidden;}
     background-color: #E0A458;
     color: white;
     font-weight: 700;
-    font-size: 0.6em;
+    font-size: 2vw;
     border-radius: 1.1em;
 }
 
@@ -59,7 +59,7 @@ body {overflow-x:hidden;}
 
 .headline-mini {
     font-weight: 700;
-    font-size: 2em;
+    font-size: 2vw;
     font-family: 'Inter', sans-serif;
     text-decoration: none;
     color: white;
@@ -68,7 +68,7 @@ body {overflow-x:hidden;}
 
 .headline2 {
     font-weight: 700;
-    font-size: 4em;
+    font-size: 4vw;
     font-family: 'Inter', sans-serif;
     text-decoration: none;
     color: white;
@@ -77,7 +77,7 @@ body {overflow-x:hidden;}
 
 .headline {
     font-weight: 700;
-    font-size: 3em;
+    font-size: 3vw;
     font-family: 'Inter', sans-serif;
     text-decoration: none;
     color: white;
@@ -91,7 +91,7 @@ body {overflow-x:hidden;}
     text-decoration: none;
     margin-right: 1em;
     font-weight: 600;
-    font-size: 1.1em;
+    font-size: 1.1vw;
     font-family: 'Inter', sans-serif;
 }
 
@@ -99,7 +99,7 @@ body {overflow-x:hidden;}
 .section-text {
     text-decoration: none;
     font-weight: 700;
-    font-size: 150%;
+    font-size: 1.45vw;
     font-family: 'Inter', sans-serif;
 }
 
@@ -112,23 +112,22 @@ a:hover {
 
 
 .big {
-    font-size: 240%;
+    font-size: 2.4vw;
 }
 
 
 #leaf {
     transform: rotate(190deg) scale(-1, 1);
     position: relative;
-    height: 253px;
-    wight: 253px;
-    margin-bottom: 5.1em;
+    width: 15vw;
+    object-fit: cover;
+    margin-bottom: 20%
 }
 
 #heart {
     transform: scale(-1, 1);
     position: relative;
-    height: 253px;
-    wight: 253px;
+    width: 15vw;
 }
 
 
@@ -170,7 +169,7 @@ a:hover {
 .price {
     text-decoration: none;
     font-weight: 700;
-    font-size: 130%;
+    font-size: 1.7vw;
     font-family: 'Inter', sans-serif;
     color: white;
     background: rgba(0, 0, 0, 0.5);
@@ -189,7 +188,7 @@ a:hover {
 
 .headline3 {
     font-weight: 700;
-    font-size: 2.3em;
+    font-size: 2.3vw;
     font-family: 'Inter', sans-serif;
     text-decoration: none;
     color: white;
@@ -201,6 +200,32 @@ a:hover {
     display: flex;
     flex-wrap: wrap;
     padding: 2%;
+}
+
+
+.aside-category {
+    line-height: 2.5em;
+    font-size: 0.73em;
+    margin-left: 5%;
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+}
+
+
+input[type="text"]::-webkit-input-placeholder {
+    color: white;
+}
+input[type="text"]::-moz-placeholder {
+    color: white;
+}
+
+
+input[type="email"]::-webkit-input-placeholder {
+    color: white;
+}
+input[type="email"]::-moz-placeholder {
+    color: white;
 }
 
 
