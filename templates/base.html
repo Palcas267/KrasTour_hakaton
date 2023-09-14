@@ -14,11 +14,11 @@
               <ul class="nav me-auto">
                 <li class="nav-item"><a href="/" type="button" class="header-ref" aria-current="page" style="vertical-align: middle; font-weight: 600;">Главная</a></li>
                 <li class="nav-item"><a href="/catalog" type="button" class="header-ref" style="vertical-align: middle; font-weight: 600;">Туры</a></li>
-                <li class="nav-item"><a href="/support" type="button" class="header-ref" style="vertical-align: middle; font-weight: 600;">Поддержка</a></li>
-                <li class="nav-item"><a href="/about" type="button" class="header-ref" style="vertical-align: middle; font-weight: 600;">О нас</a></li>
+                <li class="nav-item"><button id="btnSpt" type="button" class="header-ref" style="vertical-align: middle; font-weight: 600;">Поддержка</button></li>
+                <li class="nav-item"><button type="button" class="header-ref" style="vertical-align: middle; font-weight: 600;">О нас</button></li>
               </ul>
               <ul class="nav">
-                <li class="nav-item"><a type="button" href="/register" class="header-ref" style="">Войти</a></li>
+                <li class="nav-item"><a type="button" href="/sign-in" class="header-ref" style="">Войти</a></li>
                 <li class="nav-item"><a type="button" href="/register" class="header-ref" style="">Регистрация</a></li>
               </ul>
             </div>
@@ -34,7 +34,7 @@
             </div>
         </header>
     </div>
-  <div class="">
+  <div class="scroll-fix">
       {% block body %}
       {% endblock %}
   </div>
@@ -63,5 +63,52 @@
         <span class="section-text" style="color: #BCBCBC">@Созданно при поддержке 2-х пирожков и кружке вкусного чая. Компания KrasTour желает вам приятного отдыха</span>
     </div>
 </footer>
+
+<div id="ModalSprt" class="modal">
+
+    <div class="modal-content">
+        <div style="">
+            <span class="close">&times;</span>
+            <p class="section-text">Пишите по почте: example@expl.com</p>
+        </div>
+    </div>
+
+</div>
+
+<!--<div id="ModalAbt" class="modal">
+
+    <div class="modal-content">
+        <span id="closeAbt">&times;</span>
+        <p class="section-text">Пишите по почте: example@expl.com</p>
+    </div>
+
+</div>-->
+<script>
+
+
+var modal = document.getElementById("ModalSprt");
+var btn = document.getElementById("btnSpt");
+var span = document.getElementsByClassName("close");
+
+
+btn.onclick = function() {
+    document.body.classList.add('modal-show');
+    modal.style.display = "block";
+}
+
+
+span.onclick = function() {
+    document.body.classList.remove('modal-show');
+    modal.style.display = "none";
+}
+
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    document.body.classList.remove('modal-show');
+    modal.style.display = "none";
+  }
+}
+</script>
 </body>
 </html>

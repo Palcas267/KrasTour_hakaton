@@ -12,6 +12,11 @@ def load_user(user_id):
     return User.get(user_id)
 
 
+@app.route('/sign-in')
+def sign_in():
+    return render_template('signing-in.html')
+
+
 @app.route('/logout')
 @login_required
 def logout():
