@@ -245,6 +245,7 @@ input.register::placeholder {
 
 .search {
     height: 2.3vw;
+    font-size: 1.3vw;
 }
 
 
@@ -303,5 +304,18 @@ input.search::placeholder {
 @keyframes animatetop {
   from {top: -300px; opacity: 0}
   to {top: 0; opacity: 1}
+}
+
+
+.register {
+    font-size: 1.3vw;
+    margin-top: 10%;
+    color: white;
+    border: 2px solid white;
+    background: rgba(56, 75, 82, 0);
+    width: 17vw;
+    height: 3.2vw;
+    border-radius: 1em;
+    padding: 3%;
 }
 

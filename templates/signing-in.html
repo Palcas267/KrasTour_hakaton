@@ -3,7 +3,8 @@
     <div style="border-bottom: 2px solid; display: flex; flex-direction: row; background-color: #2D3047; padding: 5%; padding-top: 10%; justify-content: space-around">
         <form method="post" style="display: flex; flex-direction: column; justify-content: space-between; padding: 1%;">
             <h3 class="headline3" style="font-size: 3.5vw">Вход</h3>
-            <input type="email" style="font-size: 1.5vw; margin-top: 10%; color: white; border: 2px solid white; background: rgba(56, 75, 82, 0); width: 17vw; height: 3.2vw; border-radius: 1em; padding: 3%;" class="form-control register" placeholder="Введите E-Mail...">
+            <small style="color: red">{{ message }}</small>
+            <input type="email" id="email" name="email" style="color: white; background: rgba(56, 75, 82, 0); font-size" class="form-control register" placeholder="Введите E-Mail..." required>
             <button type="submit" id="sign-in" class="btn orange-circle-btn" style="font-size: 1.5vw; align-self: flex-start; margin-top: 13%; padding-right: 4%; padding-left: 4%;">Продолжить ➜</button>
         </form>
         <div style="display: flex; flex-direction: column; justify-content: space-between; word-break: break-all; padding: 1%; padding-left: 3%; max-width: 60%">

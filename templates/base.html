@@ -15,7 +15,7 @@
                 <li class="nav-item"><a href="/" type="button" class="header-ref" aria-current="page" style="vertical-align: middle; font-weight: 600;">Главная</a></li>
                 <li class="nav-item"><a href="/catalog" type="button" class="header-ref" style="vertical-align: middle; font-weight: 600;">Туры</a></li>
                 <li class="nav-item"><button id="btnSpt" type="button" class="header-ref" style="vertical-align: middle; font-weight: 600;">Поддержка</button></li>
-                <li class="nav-item"><button type="button" class="header-ref" style="vertical-align: middle; font-weight: 600;">О нас</button></li>
+                <li class="nav-item"><button id="btnAbt" type="button" class="header-ref" style="vertical-align: middle; font-weight: 600;">О нас</button></li>
               </ul>
               <ul class="nav">
                 <li class="nav-item"><a type="button" href="/sign-in" class="header-ref" style="">Войти</a></li>
@@ -68,45 +68,70 @@
 
     <div class="modal-content">
         <div style="">
-            <span class="close">&times;</span>
+            <span id="closeSprt" class="close">&times;</span>
             <p class="section-text">Пишите по почте: example@expl.com</p>
         </div>
     </div>
 
 </div>
 
-<!--<div id="ModalAbt" class="modal">
+<div id="ModalAbt" class="modal">
 
     <div class="modal-content">
-        <span id="closeAbt">&times;</span>
-        <p class="section-text">Пишите по почте: example@expl.com</p>
+        <span id="closeAbt" class="close">&times;</span>
+        <h3 class="headline3">О нас</h3>
+        <p class="section-text">Мы реально крутая и очень (команда) добрая команда и исполнители топового сайта для тебя брат</p>
     </div>
 
-</div>-->
+</div>
 <script>
 
+var modal = document.getElementsByClassName("modal");
 
-var modal = document.getElementById("ModalSprt");
-var btn = document.getElementById("btnSpt");
-var span = document.getElementsByClassName("close");
+var modalSprt = document.getElementById("ModalSprt");
+var btnSpt = document.getElementById("btnSpt");
+var spanSprt = document.getElementById("closeSprt");
 
+var modalAbt = document.getElementById("ModalAbt");
+var btnAbt = document.getElementById("btnAbt");
+var spanAbt = document.getElementById("closeAbt");
 
-btn.onclick = function() {
+btnSpt.onclick = function() {
     document.body.classList.add('modal-show');
-    modal.style.display = "block";
+    modalSprt.style.display = "block";
 }
 
 
-span.onclick = function() {
+btnAbt.onclick = function() {
+    document.body.classList.add('modal-show');
+    modalAbt.style.display = "block";
+}
+
+
+spanAbt.onclick = function() {
     document.body.classList.remove('modal-show');
-    modal.style.display = "none";
+    modalAbt.style.display = "none";
+}
+
+
+spanSprt.onclick = function() {
+    document.body.classList.remove('modal-show');
+    modalSprt.style.display = "none";
 }
 
 
 window.onclick = function(event) {
-  if (event.target == modal) {
+  if (event.target == modalSprt) {
     document.body.classList.remove('modal-show');
-    modal.style.display = "none";
+    modalSprt.style.display = "none";
+  }
+}
+
+
+window.onclick = function(event) {
+  if (event.target == modalAbt) {
+    document.body.classList.remove('modal-show');
+    modalAbt.style.display = "none";
   }
 }
 </script>
