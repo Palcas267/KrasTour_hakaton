@@ -14,12 +14,16 @@
               <ul class="nav me-auto">
                 <li class="nav-item"><a href="/" type="button" class="header-ref" aria-current="page" style="vertical-align: middle; font-weight: 600;">Главная</a></li>
                 <li class="nav-item"><a href="/catalog" type="button" class="header-ref" style="vertical-align: middle; font-weight: 600;">Туры</a></li>
-                <li class="nav-item"><button id="btnSpt" type="button" class="header-ref" style="vertical-align: middle; font-weight: 600;">Поддержка</button></li>
-                <li class="nav-item"><button id="btnAbt" type="button" class="header-ref" style="vertical-align: middle; font-weight: 600;">О нас</button></li>
+                <li class="nav-item"><button type="button" id="btnSpt" class="header-ref" style="vertical-align: middle; font-weight: 600;">Поддержка</button></li>
+                <li class="nav-item"><button type="button" id="btnAbt" class="header-ref" style="vertical-align: middle; font-weight: 600;">О нас</button></li>
               </ul>
               <ul class="nav">
+                  {% if not current_user.is_authenticated %}
                 <li class="nav-item"><a type="button" href="/sign-in" class="header-ref" style="">Войти</a></li>
                 <li class="nav-item"><a type="button" href="/register" class="header-ref" style="">Регистрация</a></li>
+                  {% else %}
+                <li class="nav-item"><a type="button" href="/profile" class="header-ref" style="border-radius: 50%;"><img src="static/images/person.png" style="width: 2vw"></a></li>
+                  {% endif %}
               </ul>
             </div>
         </nav>
@@ -28,9 +32,6 @@
               <a href="/" class="header-ref" style="padding: 0;">
                 <span class="fs-4" style="font-size: 1.5vw !important"><img src="static/images/icon.png" style="width: 2.3vw; margin-right: 1em; border-radius: 50%;">Туры по Красноярскому краю</span>
               </a>
-              <form class="col-12 col-lg-auto mb-3 mb-lg-0" style="width: 10vw" role="search">
-                <input type="search" style="color: white; border: 3px solid #5D7581; background: rgba(56, 75, 82, 0); border-color: #5D7581; width: 10vw" class="form-control search" placeholder="Поиск..." aria-label="Search">
-              </form>
             </div>
         </header>
     </div>
@@ -42,7 +43,7 @@
     <div style="display: flex; justify-content: flex-start; flex-direction: row; background-color: #2D3047; padding: 2%; height: 450px; flex-wrap: wrap;">
         <div style="display: flex; justify-content: flex-start; flex-direction: column; margin-left: 3%;">
             <h3 class="footer-headline">Соц. сети:</h3>
-            <a class="section-text" style="color: #BCBCBC;" href="https://vk.com/KrasTour">Наше VK</a>
+            <a class="section-text" style="color: #BCBCBC;" href="vk.com/KrasTour">Наше VK</a>
         </div>
         <div style="display: flex; justify-content: flex-start; flex-direction: column; margin-left: 3%;">
             <h3 class="footer-headline">Общение:</h3>
@@ -54,13 +55,12 @@
         </div>
     </div>
     <div style="display: flex; justify-content: flex-start; flex-direction: row; background-color: #3E4261; padding: 2%; border-bottom: 3px solid #2D3047;">
-        <a class="section-text" href="/about" style="color: white; margin-left: 3%;">О нас</a>
-        <a class="section-text" href="" style="color: white; margin-left: 3%;">Реклама на сайте</a>
-        <a class="section-text" href="/catalog" style="color: white; margin-left: 3%;">Бронирование</a>
-        <a class="section-text" href="/support" style="color: white; margin-left: 3%;">Поддержка</a>
+        <button id="btnAbt2" type="button" class="header-ref section-text" style="vertical-align: middle; margin-left: 3%;">О нас</button>
+        <a class="header-ref section-text" href="/catalog" style=" margin-left: 3%;">Бронирование</a>
+        <button id="btnSpt2" type="button" class="header-ref section-text" style="vertical-align: middle; margin-left: 3%;">Поддержка</button>
     </div>
     <div style="display: flex; justify-content: flex-start; flex-direction: row; background-color: #3E4261; padding: 2%;">
-        <span class="section-text" style="color: #BCBCBC">@Созданно при поддержке 2-х пирожков и кружке вкусного чая. Компания KrasTour желает вам приятного отдыха</span>
+        <span class="section-text" style="color: #BCBCBC">@Сайт создан в рамках участия команды Develop bulder’s в хакатоне. Наша команда желает вам приятного времяпрепровождения.</span>
     </div>
 </footer>
 
@@ -90,15 +90,23 @@ var modal = document.getElementsByClassName("modal");
 
 var modalSprt = document.getElementById("ModalSprt");
 var btnSpt = document.getElementById("btnSpt");
+var btnSpt2 = document.getElementById("btnSpt2");
 var spanSprt = document.getElementById("closeSprt");
 
 var modalAbt = document.getElementById("ModalAbt");
 var btnAbt = document.getElementById("btnAbt");
+var btnAbt2 = document.getElementById("btnAbt2");
 var spanAbt = document.getElementById("closeAbt");
 
 btnSpt.onclick = function() {
     document.body.classList.add('modal-show');
     modalSprt.style.display = "block";
+}
+
+
+btnAbt2.onclick = function() {
+    document.body.classList.add('modal-show');
+    modalAbt.style.display = "block";
 }
 
 
@@ -114,24 +122,27 @@ spanAbt.onclick = function() {
 }
 
 
+btnSpt2.onclick = function() {
+    document.body.classList.remove('modal-show');
+    modalSprt.style.display = "block";
+}
+
+
 spanSprt.onclick = function() {
     document.body.classList.remove('modal-show');
     modalSprt.style.display = "none";
 }
 
 
-window.onclick = function(event) {
-  if (event.target == modalSprt) {
-    document.body.classList.remove('modal-show');
-    modalSprt.style.display = "none";
-  }
-}
-
 
 window.onclick = function(event) {
   if (event.target == modalAbt) {
     document.body.classList.remove('modal-show');
     modalAbt.style.display = "none";
+  }
+  else if (event.target == modalSprt) {
+    document.body.classList.remove('modal-show');
+    modalSprt.style.display = "none";
   }
 }
 </script>

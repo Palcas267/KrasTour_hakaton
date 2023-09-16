@@ -19,7 +19,7 @@ def load_user(user_id):
     return db.session.query(User).get(user_id)
 
 
-@app.route('/sign-in')
+@app.route('/sign-in', methods=['POST', 'GET'])
 def sign_in():
     if request.method == 'POST':
         try:
@@ -27,12 +27,20 @@ def sign_in():
             user_name_filter = User.query.filter(User.email == email).one()
             user = User.query.get(user_name_filter.id)
             login_user(user, remember=True)
-            return render_template('signing-in.html')
+            return redirect('/profile')
         except:
-            message = 'Неверное имя пользователя'
+            message = 'Нет аккаунтов с таким Email'
             return render_template('signing-in.html', message=message)
     else:
         return render_template('signing-in.html')
+
+
+@app.route('/profile')
+def profile():
+    if current_user.is_authenticated:
+        return render_template('profile.html', )
+    else:
+        redirect('/register')
 
 
 @app.route('/')
