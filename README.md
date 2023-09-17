@@ -1,6 +1,11 @@
 # KrasTour_hakaton
 Site for IT-Cub, hakaton.
 
+Develop bilder's team:
+ • sergey - main programmer
+ • maks - designer
+
+
 launch guide:
 1. Copy the project to any of your directories.
 2. Open the project in the pycharm environment.
