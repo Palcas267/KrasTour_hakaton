@@ -2,7 +2,7 @@
 Site for IT-Cub, hakaton.
 
 Develop bilder's team:
-sergey - main programmer
+sergey - main programmer,
 maks - designer
 
 
