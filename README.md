@@ -16,7 +16,7 @@ launch guide:
 
 Link:
 https://krastour-palcas.amvera.io
-
+https://www.figma.com/file/6JWRTCuE1vUPSYg2vJYLRg/Kras_Tour-maket?type=design&node-id=0%3A1&mode=design&t=mOFRYn60DqkaCGQ2-1
 
 
 
